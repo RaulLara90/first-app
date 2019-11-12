@@ -1,0 +1,19 @@
+<app-navbar>
+  <div class="row">
+    <app-button [genre]='drama' (getValue)="filterGenre($event)"></app-button>
+    <app-button [genre]='action' (getValue)="filterGenre($event)"></app-button>
+    <app-button [genre]='comedy' (getValue)="filterGenre($event)"></app-button>
+    <!-- <div class="input-field col s6">
+      <input placeholder="Director" id="director" type="text" class="validate" [(ngModel)]="director">
+    </div>
+    <div class="input-field col s6">
+      <input placeholder="Films" id="films" type="text" class="validate" [(ngModel)]="films">
+    </div> -->
+  </div>
+</app-navbar>
+
+<div class="movies">
+  <div *ngFor="let movie of getMovies()" >
+      <app-card [movie]='movie'></app-card>
+  </div>
+</div>

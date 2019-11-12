@@ -1,0 +1,11 @@
+<div class="card blue darken-1">
+  <div class="card-content white-text">
+    <span class="card-title">{{movie.title}}</span>
+    <p>{{movie.director}}</p>
+  </div>
+  <div class="card-action genre">
+    <a *ngFor="let genre of movie.genre">
+      <span>{{genre}}</span>
+    </a>
+  </div>
+</div>
